@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -13,7 +14,7 @@ const Card = ({image, alt, title, price, description, cta, icon}) => {
                 <p>{description}</p>
                 <div className='cta'>
                     <Link to="/">{cta}</Link>
-                    <p src={icon}></p>
+                    <FontAwesomeIcon icon={icon} style={{color: "#000000"}}/>
                 </div>
             </div>
     </div>

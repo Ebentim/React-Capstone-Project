@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Card2 from '../utils/Card2'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 const Testimonials = () => {
     const [user, setUser] = useState({})
     useEffect(()=>{
@@ -26,7 +28,7 @@ const Testimonials = () => {
             return(
                 <Card2
             key={key}
-            rating = "*"
+            rating = {<FontAwesomeIcon icon={faStar} style={{color: "#F4CE14", fontSize: "18px"}}/>}
             image={user[key].picture.thumbnail}
             alt={[user[key].name.title, user[key].name.first, user[key].name.last]}
             name={[user[key].name.first, " ", user[key].name.last]}

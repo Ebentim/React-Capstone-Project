@@ -3,6 +3,7 @@ import Card from '../utils/Card'
 import greekSalad from '../icons_assets/greek-salad.jpg'
 import bruchetta from '../icons_assets/bruchetta.jpeg'
 import lemonDessert from '../icons_assets/lemon-dessert.jpg'
+import { faMotorcycle } from '@fortawesome/free-solid-svg-icons'
 const cards = {
     greekSalad:{
         image: greekSalad,
@@ -11,7 +12,8 @@ const cards = {
         price: "$12.99",
         description: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
         cta: "Order a delivery",
-        icon: ""
+        icon: faMotorcycle
+
     },
     bruchetta:{
         image: bruchetta,
@@ -20,7 +22,7 @@ const cards = {
         price: "$5.99",
         description: "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. ",
         cta: "Order a delivery",
-        icon: ""
+        icon: faMotorcycle
     },
     lemonDessert:{
         image: lemonDessert,
@@ -29,8 +31,7 @@ const cards = {
         price: "$5.00",
         description: "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
         cta: "Order a delivery",
-        icon: ""
-
+        icon: faMotorcycle
     }
 }
 const Highlights = () => {

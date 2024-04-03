@@ -37,8 +37,8 @@ a:hover, a:active{
   color: #F4CE14 !important;
 }
 #home-hero{
-  margin: 0;
-  height: 405px;
+  height: 385px;
+  padding-top: 20px;
   background-color: #495E57;
   width: calc(662px +257px);
   position: relative;
@@ -50,7 +50,6 @@ a:hover, a:active{
   color: #F4CE14;
   font-weight: bold;
   font-size: 64px;
-  margin: 0;
 }
  h3{
   font-size: 40px;
@@ -90,13 +89,14 @@ border-radius: 8px;
   margin-right: 209px;
 }
 .highlight-title{
-  margin: 70px 209px 30px 209px;
+  width: 100%;
+  margin: 70px 0 30px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .highlight-title h3{
-  color: #333333 !important;
+  color: #000000 !important;
 
 }
 #specials{
@@ -137,6 +137,7 @@ border-radius: 8px;
   .card-title h6{
     font-size: 24px;
     font-weight: 900;
+    color: #000000;
   }
   .card-title p {
     color: #FF0000;
@@ -150,16 +151,14 @@ border-radius: 8px;
   }
 
   .cta{
-    display: flex;
-    place-content: center;
-  }
-  .cta{
     font-size: 20px;
     font-weight: 700;
   }
   .cta a{
     text-decoration: underline 5px #F4CE14 !important;
     width: 100%;
+    margin-right: 20px;
+    color: #000000;
   }
   .cta a:hover, .cta a:active{
     color: #495E57 !important;
@@ -175,10 +174,10 @@ border-radius: 8px;
   .testimony{
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 5px;
     align-items: center;
     margin: 10px 209px;
-
+    overflow: hidden;
   }
   .card2-container{
     display: flex;
@@ -212,14 +211,94 @@ border-radius: 8px;
   margin: 5px 10px;
 }
 .card2-container p{
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   width: 250px;
   text-align: center;
-  margin: 5px 20px;
+  margin: 5px 10px;
   padding-bottom: 10px;
 }
 .name-div img{
   border-radius: 50%;
   border: none;
+}
+#about *{
+  color: #000000;
+}
+#about{
+  height: 530px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 209px;
+}
+#about-title{
+  font-size: 64px;
+}
+#about-subtitle{
+  font-size: 40px;
+}
+#about-text p{
+  width: 403px;
+}
+#about-image{
+  position: relative;
+  height: 328px;
+  width: 276px;
+  margin-bottom: 50px;
+}
+#about-image img:first-child{
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+#about-image img:last-child{
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  position: absolute;
+  right: 100px;
+  top: 100px;
+  z-index: -1;
+}
+#footer{
+  display: flex;
+  justify-content: space-between;
+  background-color: #495E57;
+  padding: 20px;
+}
+#footer *{
+  color: #FFFFFF !important;
+}
+#footer img{
+  height: 150px;
+  margin-left: 209px;
+}
+#footer h4{
+  font-weight: bold;
+  font-size: 20px;
+}
+#navigation-links{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: left;
+}
+#contact-information{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: left;
+}
+#social-media{
+  margin-right: 209px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 10px;
+}
+#social-media a{
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
