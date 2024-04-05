@@ -38,7 +38,7 @@ const Highlights = () => {
   return (
     <section id='highlights'>
         <div className='highlight-title'>
-        <h3>This Week Specials!</h3>
+            <h3>This Week Specials!</h3>
             <button>Online Menu</button>
         </div>
         <div id='specials'>

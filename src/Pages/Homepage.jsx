@@ -12,7 +12,6 @@ const Homepage = () => {
         <Highlights/>
         <Testimonials/>
         <About/>
-        <Footer/>
     </main>
   )
 }

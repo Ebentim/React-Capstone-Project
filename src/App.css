@@ -4,6 +4,7 @@
   text-decoration: none;
   margin: 0;
 }
+
 header{
   display: flex;
   justify-content: center;
@@ -36,12 +37,32 @@ nav ul a{
 a:hover, a:active{
   color: #F4CE14 !important;
 }
+#active{
+  color: #F4CE14 !important;
+}
 #home-hero{
+  background-color: #495E57;
+}
+#home-hero, #reservation-hero{
   height: 385px;
   padding-top: 20px;
-  background-color: #495E57;
   width: calc(662px +257px);
   position: relative;
+}
+#reservation-hero img{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -2;
+}
+.cover{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  z-index: -1;
 }
 .hero-text{
   margin-left: 209px;
@@ -95,7 +116,7 @@ border-radius: 8px;
   justify-content: space-between;
   align-items: center;
 }
-.highlight-title h3{
+.highlight-title h3, .reserve-title h3{
   color: #000000 !important;
 
 }
@@ -251,6 +272,7 @@ border-radius: 8px;
   height: 100%;
   width: 100%;
   border-radius: 8px;
+  transition: opacity 0.5s ease-in-out;
 }
 #about-image img:last-child{
   height: 100%;
@@ -301,4 +323,176 @@ border-radius: 8px;
   display: flex;
   gap: 10px;
   align-items: center;
+}
+.reserve-title{
+  margin-left: 209px;
+}
+.reservation-form{
+  width:568px;
+  height: 797px;
+  margin: 10px auto;
+  border-radius: 8px;
+  border: 3px solid #495E57;
+}
+.reservation-form p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000 !important;
+  width: 400px;
+  text-align: left;
+  margin: 20px auto;
+}
+.personal-details, .table-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reservation-form .button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  margin: 20px auto;
+}
+.personal-details * label, .table-details * label{
+  width: 400px;
+  margin: 20px auto;
+}
+.table-details *, .personal-details *{
+  width: 400px;
+  margin-bottom: 10px;
+}
+.reservation-form input, .reservation-form select{
+  height: 80px;
+  background-color: #EDEFEE;
+  color: #000000;
+  font-size: 24px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.reservation-form select
+label{
+  font-size: 24px;
+}
+.required{
+  color: #FF0000;
+}
+.reservation-form input:focus, select:focus{
+  outline: none;
+}
+.reservation-form input:valid, select:valid{
+  background-color: #495E57;
+  color: #FFFFFF !important;
+}
+.reservation-form input::placeholder{
+  color: #495E57;
+  font-size: 24px;
+}
+.reservation-form button{
+  background-color: #495E57;
+  width: 149px;
+  height: 57px;
+  color: white;
+}
+.button-container .prev-button{
+  background-color: #F4CE14;
+  width: auto;
+  color: #495E57;
+  font-size: 18px;
+}
+.button-container .next-button{
+  color: #FFFFFF;
+  background-color: #495E57;
+  font-size: 18px;
+}
+.reservation-form #progress{
+  width: 400px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+}
+#progress div{
+  border: 1px solid #495E57;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 24;
+}
+#progress span{
+  height: 1px;
+  width: 87.12px;
+  background-color: #495E57;
+}
+#progress .complete{
+  border: 1px solid #F4CE14;
+  background-color: #F4CE14;
+}
+#progress .in-progress{
+  border: 1px solid #F4CE14;
+}
+.react-select-container{
+  display: flex;
+}
+input[type='number']::-webkit-inner-spin-button {
+  display: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator{
+  border-color: #FFFFFF;
+}
+select>option{
+  background-color: #EDEFEE;
+  color: #495E57;
+  width: 100%;
+  margin: 0 auto;
+}
+.reservation-form .table-details select{
+  text-align: center;
+  appearance: none;
+  margin-bottom: 0;
+  color: #495E57;
+}
+.selectDiv{
+  position: relative;
+  width: 400px;
+  height: 80px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFFFFF;
+}
+textarea{
+  font-size: 24px;
+  width: 380px !important;
+  height: 180px;
+  border: none;
+  border-radius: 8px;
+  background-color: #EDEFEE;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  resize: none;
+  padding: 10px;
+}
+textarea:focus{
+  outline: none;
+  border: #495E57;
+}
+.valid{
+  background-color: #495E57;
+  color: #FFFFFF;
+  overflow: auto;
+  ::-webkit-scrollbar{
+    display: none;
+  };
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+form{
+  margin-top: 50px;
 }
