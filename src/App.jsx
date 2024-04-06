@@ -13,14 +13,14 @@ function App() {
   }
   return (
     <ReserveProvider>
-      <div className='App'>
+      <>
         <NavigationBar/>
         <Routes>
           <Route path='/' element={<Homepage/>}/>
           <Route path='/reservation' element={<Reservation/>}/>
         </Routes>
         <Footer/>
-      </div>
+      </>
     </ReserveProvider>
   )
 }

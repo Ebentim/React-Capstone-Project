@@ -327,6 +327,9 @@ border-radius: 8px;
 .reserve-title{
   margin-left: 209px;
 }
+#reservation-form{
+  position: relative
+}
 .reservation-form{
   width:568px;
   height: 797px;
@@ -405,12 +408,17 @@ label{
   color: #495E57;
   font-size: 18px;
 }
+#payment-form ~ #main-prev{
+  margin: 30px auto;
+  display: grid;
+  place-content: center;
+}
 .button-container .next-button{
   color: #FFFFFF;
   background-color: #495E57;
   font-size: 18px;
 }
-.reservation-form #progress{
+#progress{
   width: 400px;
   height: 33px;
   display: flex;

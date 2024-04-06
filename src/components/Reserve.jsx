@@ -3,6 +3,7 @@ import { faAngleDown, faAngleUp, faChair, faChampagneGlasses, faCheck, faClock }
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Payment from './payment/Payment';
 import { useReserveContext } from '../contexts/ReserveContext';
+import Modal from './modal/Modal';
 
 const occasionOptions = [
     {value: '', label: "Occasion"},
@@ -29,11 +30,14 @@ const seatingOptions = [
     {value: 'outdoor', label: "Outdoor"}
 ];
 const Reserve = () => {
-    const [progress, setProgress] = useState(0)
+    const {successful, progress, setProgress} = useReserveContext()
     const [dropDown, setDropdown] = useState(false)
     const [dropDown2, setDropdown2] = useState(false)
-    const { reservationDetails, updateReservationDetails } = useReserveContext();
+    const {updateReservationDetails } = useReserveContext();
 
+    const handleRefresh = ()=>{
+        location.reload()
+    }
     const handleValid = ()=>{
         const textarea = document.querySelector('textarea')
         textarea.value.length >=6? textarea.classList.add("valid"): textarea.classList.remove("valid")
@@ -42,33 +46,28 @@ const Reserve = () => {
   const handleContinue = (e) => {
     e.preventDefault();
     if (progress === 0) {
-      // Update personal details section in context
       updateReservationDetails('personalDetails', {
         firstName: document.getElementById('firstname').value,
         lastName: document.getElementById('lastname').value,
         email: document.getElementById('email').value,
         phoneNumber: document.getElementById('phone_number').value
-        // Add more fields as needed
       });
     } else if (progress === 1) {
-      // Update table details section in context
       updateReservationDetails('tableDetails', {
         numberOfGuests: document.getElementById('guests').value,
         occasion: document.getElementById('occasion').value,
         date: document.getElementById('date').value,
         time: document.getElementById('time').value
-        // Add more fields as needed
       });
     } else if (progress === 2) {
-      // Update additional details section in context
       updateReservationDetails('additionalDetails', {
         seatingOption: document.getElementById('seatingOption').value,
         comments: document.getElementById('comments').value
-        // Add more fields as needed
       });
     }
     setProgress(progress + 1);
     scrollToReservationForm();
+    if (progress > 4) setProgress(4)
   };
 
     const handleDropdown1 = () =>{
@@ -83,6 +82,7 @@ const Reserve = () => {
         if(progress >=1){
             setProgress(progress -1)
         }
+        scrollToReservationForm()
     }
 
     const scrollToReservationForm = () => {
@@ -96,10 +96,7 @@ const Reserve = () => {
         <div className='reserve-title'>
             <h3>Reserve a Table</h3>
         </div>
-        {progress <3?
-        <div className="reservation-form">
-        <form action="" method="post">
-            <div id="progress">
+        <div id="progress">
                 {progress < 1 ? <div className={progress < 1? "in-progress":""}>1</div> :<div className='complete'><FontAwesomeIcon icon={faCheck}/></div>}
 
                 <span className={progress>0? "complete" : ""}></span>
@@ -115,6 +112,9 @@ const Reserve = () => {
                 {progress > 3? <div className='complete'><FontAwesomeIcon icon={faCheck}/></div>: <div className={progress >=3? "in-progress":""}>4</div>}
 
             </div>
+        {progress <3?
+        <div className="reservation-form">
+        <form action="" method="post">
                 {progress === 0? <>
                     <p>Personal Details</p>
             <div className="personal-details">
@@ -192,11 +192,14 @@ const Reserve = () => {
         </>
             }
         </form>
-    </div> :
+    </div> : progress === 3 ?
         <>
             <Payment/>
-            <button className="prev-button" onClick={handleBack}>Back to Form</button>
-        </>}
+            <button className="prev-button" id='main-prev' onClick={handleBack}>Back to Form</button>
+        </>
+        :
+        <Modal title={successful? "Successful": "Unsuccessful"} c1={successful? "Your Reservation is  confirmed": "Unfortunately, there aren't any tables available for your requested time at Little Lemon Restaurant."} c2= {successful? "A confirmation message has been sent to your email": "Would you like to see alternative times or be added to a waitlist?"} c3={successful? "Thanks for choosing Little Lemon Restaurant" : "We apologize for any inconvenience this may cause."} cta1={successful? "New Reservation": "See Altenative Time"} action={successful? handleRefresh : null} />
+    }
     </section>
   )
 }

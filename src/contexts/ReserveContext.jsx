@@ -3,6 +3,8 @@ import React, { createContext, useContext, useState } from 'react';
 const ReserveContext = createContext({});
 
 const ReserveProvider = ({ children }) => {
+  const [successful, setSuccessful] = useState(0)
+  const [progress, setProgress] = useState(0)
   const [reservationDetails, setReservationDetails] = useState({
     personalDetails: {},
     tableDetails: {},
@@ -17,7 +19,7 @@ const ReserveProvider = ({ children }) => {
   };
 
   return (
-    <ReserveContext.Provider value={{ reservationDetails, updateReservationDetails }}>
+    <ReserveContext.Provider value={{ reservationDetails, updateReservationDetails, progress, setProgress, successful, setSuccessful }}>
       {children}
     </ReserveContext.Provider>
   );

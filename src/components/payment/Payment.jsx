@@ -1,14 +1,24 @@
 import React from 'react'
 import './Payment.css'
 import { useReserveContext } from '../../contexts/ReserveContext';
+import Modal from '../modal/Modal';
 const Payment = () => {
-    const { reservationDetails} = useReserveContext();
+    const { successful, setSuccessful, progress, setProgress, reservationDetails} = useReserveContext();
     const {personalDetails, tableDetails, additionalDetails} = reservationDetails
-    console.log(reservationDetails, " from payment page");
+
+    const handleSuccessful = ()=>{
+        setSuccessful(Math.floor(Math.random()*2))
+    }
+    const handlePayment = (e)=>{
+        e.preventDefault()
+        setProgress(progress + 1);
+        handleSuccessful()
+        
+    }
   return (
     <section id='payment-form'>
         <div className='order-details'>
-                <p>Reservation Order Details</p>
+                <h5>Reservation Order Details</h5>
                     <p className='order-subheading'>Personal Details</p>
                 <div>
                     <p>First Name: {personalDetails.firstName}</p>
@@ -30,24 +40,20 @@ const Payment = () => {
                 </div>
         </div>
         <div className='payment-info'>
-                <p>Payment Information</p>
+                <h5>Payment Information</h5>
                 <div className="payment-details">
+                    <div className="payable">
+                        <h3> Total: &#36; {tableDetails.numberOfGuests <=2? 5 : (5 * tableDetails.numberOfGuests) - 5 }</h3>
+                    </div>
                     <label htmlFor="cardno"> Card Number <span className='required'>*</span></label>
                     <input type="number" name="cardno" id="cardno" placeholder='Card number' required/>
                     <label htmlFor="holdername">Card Holder name <span className='required'>*</span></label>
                     <input type="text" name='holdername' id='holdername' placeholder='Card holder name' required/>
-                    <div id="expire-cvv">
-                        <div>
-                            <label htmlFor="expire">Expiry date<span className='required'>*</span></label>
-                            <input type="expire" name="expire" id="expire" placeholder='Expiry date' required/>
-                        </div>
-                        <div>
-                            <label htmlFor="cvv">CVV: <span className='required'>*</span></label>
-                            <input type="tel" name="cvv" id="cvv" required placeholder='CVV'/>
-                        </div>
-                    </div>
-                    <div className="button-container">
-                    </div>
+                    <label className='label-expire' htmlFor="expire">Expiry date<span className='required'>*</span></label>
+                    <input type="number" name="expire" id="expire" placeholder="dd/mm" required/>
+                    <label className='label-cvv' htmlFor="cvv">CVV: <span className='required'>*</span></label>
+                    <input type="number" name="cvv" id="cvv" required placeholder='CVV'/>
+                    <button onClick={handlePayment}>Paynow</button>
                 </div>
         </div>
     </section>

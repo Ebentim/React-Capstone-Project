@@ -1,5 +1,6 @@
 import React from 'react'
 import hero from "../icons_assets/restauranfood.jpg"
+import { Link } from 'react-router-dom'
 const Hero = () => {
   return (
     <section id='home-hero'>
@@ -7,7 +8,9 @@ const Hero = () => {
         <h1>Little Lemon</h1>
         <h3>Chicago</h3>
         <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-        <button>Reserve a Table</button>
+        <Link to="/reservation">
+          <button>Reserve a Table</button>
+        </Link>
         </div>
         <div className='hero-image'>
             <img src={hero} alt="a checf carrying bruchetta" />

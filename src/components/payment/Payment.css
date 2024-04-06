@@ -1,12 +1,20 @@
 /* 495E57 primary color */
 /* F4CE14 secondary color */
 #payment-form {
-    width: 100vw;
+    margin: 30px 209px 0 209px;
     display: flex;
+    gap: 50px;
 }
 .order-details, .payment-info{
     width:568px;
     height: 700px;
+}
+/* Rectangle 59 */
+.order-details{
+    box-shadow: 15px 4px 20px #495E57;
+    border-radius: 8px;
+    border-start-end-radius: 8%;
+    border-end-end-radius: 8%;
 }
 .order-details div {
     max-height: 250px;
@@ -47,42 +55,61 @@
     font-size: 20px;
     font-weight: bold;
 }
-.payment-info .payment-details{
+
+.payment-info{
+    border-radius: 8px;
+    border-start-start-radius: 8%;
+    border-end-start-radius: 8%;
+    box-shadow: -15px 4px 20px #495E57;
+}
+.payment-details{
+    width: 400px;
+    margin: auto;
+    display: grid;
+    row-gap: 5px;
+    column-gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, auto);
+    grid-auto-rows: minmax(40px auto);
+}
+.payment-info input{
+    height: 50px;
+    width: 100% !important;
+    background-color: #EDEFEE;
+    color: #000000;
+    font-size: 24px;
+    border-radius: 8px;
+    border: none;
+}
+label, input, button{
+    grid-column: 1/-1;
+}
+.label-expire{
+    grid-column: 1/2;
+}
+.label-cvv{
+    grid-column: 2/-1;
+    grid-row: 6/7;
+}
+.label-expire ~ input {
+    grid-column: 1/2
+}
+.label-cvv ~ input{
+    grid-column: 2/-1;
+}
+.payment-details button {
+    width: 100% !important;
+    margin: 30px auto 0 auto;
+}
+.payable{
+    height: 200px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 400px !important;
-    margin: 0 auto;
+    grid-column: 1/span 3;
 }
-.payment-info .payment-details *{
-    height: 40px;
-    width: 392px;
-}
-.payment-details input{
-    background-color: #EDEFEE;
-  color: #000000;
-  font-size: 24px;
-  border-radius: 8px;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.payment-details label{
-    height: fit-content !important;
-    margin-top: 20px;
-    margin-bottom: 0 !important;
-}
-#expire-cvv{
-    display: grid;
-    column-gap: 100px;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 20px;
-    width: 100% !important;
-}
-#expire-cvv div{
-    width: 100% !important;
-}
-#expire-cvv div *{
-    width: 100% !important;
+h5{
+    font-size: 24px;
+    width: 400px;
+    margin: 20px auto 0 auto;
 }
