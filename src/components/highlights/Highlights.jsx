@@ -1,9 +1,10 @@
 import React from 'react'
-import Card from '../utils/Card'
-import greekSalad from '../icons_assets/greek-salad.jpg'
-import bruchetta from '../icons_assets/bruchetta.jpeg'
-import lemonDessert from '../icons_assets/lemon-dessert.jpg'
+import Card from '../../utils/Card'
+import greekSalad from '../../icons_assets/greek-salad.jpg'
+import bruchetta from '../../icons_assets/bruchetta.jpeg'
+import lemonDessert from '../../icons_assets/lemon-dessert.jpg'
 import { faMotorcycle } from '@fortawesome/free-solid-svg-icons'
+import './Hightlights.css'
 const cards = {
     greekSalad:{
         image: greekSalad,

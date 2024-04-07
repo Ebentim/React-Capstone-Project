@@ -1,0 +1,115 @@
+#highlights{
+    margin-left: 209px;
+    margin-right: 209px;
+  }
+  .highlight-title{
+    width: 100%;
+    margin: 70px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .highlight-title h3{
+    color: #000000 !important;
+  }
+  #specials{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-container{
+    width: calc(80%/3);
+    height: 440px;
+    display:flex;
+    gap: 0;
+    flex-direction: column;
+    overflow: hidden !important;
+  }
+  .card-container img{
+    height: 182px;
+    width: 100%;
+    border-start-start-radius: 8px;
+    border-start-end-radius: 8px;
+    margin: 0;
+    transition: all ease-in 500ms;
+  }
+  .card-container img:hover{
+    transform: scaleX(1.1);
+  }
+  .card-body{
+    height: 180px;
+    width: 90%;
+    padding: 20px 5%;
+    background: #E8E8E8;
+    }
+    .card-title{
+      margin: 0 !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card-title h6{
+      font-size: 24px;
+      font-weight: 900;
+      color: #000000;
+    }
+    .card-title p {
+      color: #FF0000;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .card-body >p {
+      text-align: justify;
+      height: 117.07px;
+      margin: 5px auto;
+    }
+    .cta{
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .cta a{
+      text-decoration: underline 5px #F4CE14 !important;
+      width: 100%;
+      margin-right: 20px;
+      color: #000000;
+    }
+    .cta a:hover, .cta a:active{
+      color: #495E57 !important;
+    }
+
+@media  screen and (max-width: 479px) {
+    #highlights{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .highlight-title{
+        margin: 30px 0;
+    }
+    .highlight-title h3{
+        font-size: 36px;
+        text-align: center;
+    }
+    .highlight-title button{
+        display: none;
+    }
+    #specials{
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .card-container{
+        width: 100%;
+        height: auto;
+        display:flex;
+        gap: 0;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 767px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+}

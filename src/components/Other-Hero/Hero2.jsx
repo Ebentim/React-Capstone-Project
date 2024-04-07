@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import slide1 from '../icons_assets/restaurant.jpg'
-import slide2 from '../icons_assets/greek-salad.jpg'
-import slide3 from '../icons_assets/bruchetta.jpeg'
-import slide4 from '../icons_assets/lemon-dessert.jpg'
+import slide1 from '../../icons_assets/restaurant.jpg'
+import slide2 from '../../icons_assets/greek-salad.jpg'
+import slide3 from '../../icons_assets/bruchetta.jpeg'
+import slide4 from '../../icons_assets/lemon-dessert.jpg'
 const Hero2 = () => {
     const [count, setCount] = useState(1)
     useEffect(()=>{

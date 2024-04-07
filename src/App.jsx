@@ -1,7 +1,7 @@
 import './App.css'
 import { useState } from 'react';
-import NavigationBar from './components/NavigationBar';
-import Footer from './components/Footer';
+import NavigationBar from './components/Navigation/NavigationBar';
+import Footer from './components/footer/Footer';
 import Homepage from './Pages/Homepage';
 import Reservation from './Pages/Reservation';
 import { Route, Routes } from 'react-router-dom';

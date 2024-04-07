@@ -1,6 +1,7 @@
 import React from 'react'
-import hero from "../icons_assets/restauranfood.jpg"
+import hero from "../../icons_assets/restauranfood.jpg"
 import { Link } from 'react-router-dom'
+import './Hero.css'
 const Hero = () => {
   return (
     <section id='home-hero'>

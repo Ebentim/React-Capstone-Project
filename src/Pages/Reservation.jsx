@@ -1,7 +1,6 @@
 import React from 'react'
-import Hero2 from '../components/Hero2'
-import Reserve from '../components/Reserve'
-
+import Hero2 from '../components/Other-Hero/Hero2'
+import Reserve from '../components/Reserve/Reserve'
 const Reservation = () => {
   return (
     <main>

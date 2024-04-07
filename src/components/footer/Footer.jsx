@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Logo from "../icons_assets/logo2.png"
+import Logo from "../../icons_assets/logo2.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faX } from '@fortawesome/free-solid-svg-icons';
+import './Footer.css'
 const dormat = {
     Home:{
         title: "Home",
@@ -27,9 +28,10 @@ const dormat = {
         paths: "/login"
       }
 }
+const date = new Date()
 const Footer = () => {
   return (
-    <section id='footer'>
+    <footer id='footer'>
         <img src={Logo} alt="little lemon restaurant logo" />
         <div id="navigation-links">
             <h4>Navigation</h4>
@@ -51,7 +53,7 @@ const Footer = () => {
             <p>2395 Maldove Way,</p>
             <p>Chicago Illinois</p>
             <a href='tel:(123)-456-7890'>(123)-456-7890</a>
-            <a href="mailto:care@littlelemonrestaurant.com">care@littlelemonrestaurant.com</a>
+            <a href="mailto:care@littlelemon.com">care@littlelemon.com</a>
         </div>
         <div id='social-media'>
             <h4>Connect</h4>
@@ -68,7 +70,8 @@ const Footer = () => {
                 <span>@littleLemon</span>
             </a>
         </div>
-    </section>
+        <h4 className='copyright'>&#169; Little Lemon Restaurant {date.getFullYear()}</h4>
+    </footer>
   )
 }
 

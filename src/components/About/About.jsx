@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import mario from '../icons_assets/MarioandAdrianb.jpg'
-import chef from '../icons_assets/restaurantchefB.jpg'
+import mario from '../../icons_assets/MarioandAdrianb.jpg'
+import chef from '../../icons_assets/restaurantchefB.jpg'
+import './About.css'
 const About = () => {
 const [image, setImage] = useState(1);
 

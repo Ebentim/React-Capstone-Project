@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import { faAngleDown, faAngleUp, faChair, faChampagneGlasses, faCheck, faClock } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Payment from './payment/Payment';
-import { useReserveContext } from '../contexts/ReserveContext';
-import Modal from './modal/Modal';
+import Payment from '../payment/Payment';
+import { useReserveContext } from '../../contexts/ReserveContext';
+import Modal from '../modal/Modal';
 
 const occasionOptions = [
     {value: '', label: "Occasion"},

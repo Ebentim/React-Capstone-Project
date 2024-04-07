@@ -1,5 +1,6 @@
 import React from 'react'
-import logo from '../icons_assets/Logo.svg'
+import logo from '../../icons_assets/Logo.svg'
+import './Navigation.css'
 const navItems = {
   Home:{
     title: "Home",
