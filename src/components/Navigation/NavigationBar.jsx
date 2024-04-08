@@ -1,47 +1,72 @@
-import React from 'react'
-import logo from '../../icons_assets/Logo.svg'
-import './Navigation.css'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import logo from '../../icons_assets/Logo.svg';
+import basket from '../../icons_assets/Basket.svg';
+import './Navigation.css';
+
 const navItems = {
-  Home:{
+  Home: {
     title: "Home",
-    paths: "/",
+    path: "/",
   },
-  About:{
+  About: {
     title: "About",
-    paths: "/#about"
+    path: "/#about"
   },
-  Menu:{
+  Menu: {
     title: "Menu",
-    paths: "/menu"
+    path: "/menu"
   },
-  Reservation:{
+  Reservation: {
     title: "Reservation",
-    paths :"/reservation"
+    path: "/reservation"
   },
   Login: {
     title: "Login",
-    paths: "/login"
+    path: "/login"
   }
-}
+};
 
 const NavigationBar = () => {
-  return (
-    <header>
-      <nav>
-        <img src={logo} alt='logo'/>
-        <ul className='navbar-list'>
-          {Object.keys(navItems).map(key => {
-              return (
-                <li key={key}>
-                  <a href={navItems[key].paths} aria-description={navItems[key].title}>{navItems[key].title}</a>
-                </li>
-              )
-          }
-          )}
-        </ul>
-      </nav>
-    </header>
-  )
-}
+  const [openMenu, setOpenMenu] = useState(false);
 
-export default NavigationBar
+  const handleMenu = (e) => {
+    setOpenMenu(!openMenu);
+  };
+
+  return (
+    <header id={window.innerWidth <= 767 ? "mobile" : ""} className={openMenu? "background": ''}>
+      {window.innerWidth <= 767 ?
+        <nav id='mobile-screen'>
+          <FontAwesomeIcon icon={faBars} size='2xl' className={`hamburger ${openMenu? 'none': ''}`} onClick={handleMenu} />
+          {openMenu ? <ul className='mobile-navbar-list'>
+            {Object.entries(navItems).map(([key, value]) => (
+              <li key={key}>
+                <Link to={value.path} aria-label={value.title}>{value.title}</Link>
+              </li>
+            ))}
+          </ul>: ""}
+          <FontAwesomeIcon icon={faTimes} size='2xl' className={`menu-close ${openMenu? '': "none"}`} onClick={handleMenu} />
+          <img id="mobile-logo" src={logo} alt='logo' className={`hamburger ${openMenu? 'none': ''}`}/>
+          <div id="cart" className={`hamburger ${openMenu? 'none': ''}`}>
+            <img src={basket} alt="shopping basket" />
+          </div>
+        </nav> :
+        <nav id='desktop-screen'>
+          <img src={logo} alt='logo' />
+          <ul className='navbar-list'>
+            {Object.entries(navItems).map(([key, value]) => (
+              <li key={key}>
+                <Link to={value.path} aria-label={value.title}>{value.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      }
+    </header>
+  );
+};
+
+export default NavigationBar;

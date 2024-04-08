@@ -2,8 +2,9 @@ header{
     display: flex;
     height: 80px;
     margin: 0;
-  }
-  nav{
+    transition: all ease 500ms;
+}
+  #desktop-screen{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,44 +12,81 @@ header{
     margin: 0 209px;
     width: 100%;
   }
-  nav ul{
+  #desktop-screen ul{
     list-style: none;
     display: flex;
     width: 662px;
     justify-content: space-between;
     align-items: center;
   }
-  nav ul a{
+  #desktop-screen ul a{
     font-weight: 500;
     font-size: 20px;
   }
   a:hover, a:active, #active{
     color: #F4CE14 !important;
   }
-
-@media  screen and (max-width: 479px) {
-    /* nav{
-        flex-direction: column;
-        width: fit-content !important;
-        margin: 0 !important;
-        place-self: center;
-    }
-    nav ul{
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-    }
-    nav ul a{
-        font-size: 16px;
-    } */
+#mobile-screen{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+  width: 100%;
+  position: relative;
 }
-/*
-@media only screen and (max-width: 767px) {
+#mobile-logo{
+  width: 200px;
+  height: auto;
 }
-
+.none{
+  display: none;
+}
+.mobile-navbar-list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+.mobile-navbar-list li{
+  padding: 20px 0;
+  width: 100%;
+}
+.menu-close{
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #495e5712;
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+.background{
+  height: 300px;
+  position: relative;
+  background-color: #F4CE14;
+  border-end-start-radius: 8px;
+  border-end-end-radius: 8px;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-}
+  #desktop-screen{
+    margin: 0 20px;
+  }
+  #desktop-screen ul{
+    gap: 20px;
+    display: flex;
+    width: fit-content;
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  }
 }
-*/
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
+  #desktop-screen{
+    margin: 0 20px;
+  }
+  #desktop-screen ul{
+    gap: 20px;
+    display: flex;
+    width: fit-content;
+  }
+}

@@ -83,10 +83,10 @@
         margin-right: 20px;
     }
     .highlight-title{
-        margin: 30px 0;
+        margin: 20px 0;
     }
     .highlight-title h3{
-        font-size: 36px;
+        font-size: 30px;
         text-align: center;
     }
     .highlight-title button{
@@ -105,11 +105,86 @@
         flex-direction: column;
     }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 478px) and (max-width: 767px) {
+  #highlights{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .highlight-title{
+    margin: 20px 0;
+  }
+  .highlight-title h3{
+    font-size: 36px;
+    text-align: center;
+  }
+  #specials{
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .card-container{
+    width: 100%;
+    height: auto;
+    display:flex;
+    gap: 0;
+    flex-direction: column;
+  }
+  .card-container img{
+  height: auto;
+  max-height: 250px;
+  width: 100%;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  #highlights{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .highlight-title{
+    margin: 20px 0;
+  }
+  #specials{
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .card-container{
+    width: 100%;
+    height: auto;
+    display:flex;
+    gap: 0;
+    flex-direction: column;
+  }
+  .card-container img{
+  height: auto;
+  max-height: 350px;
+  width: 100%;
+  }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
+  #highlights{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #specials{
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+  .card-container{
+    width: 100%;
+    height: auto;
+    display:flex;
+    gap: 0;
+    flex-direction: column;
+}
+.card-container img{
+  height: auto;
+  min-height: 300px;
+  max-height: 500px;
+  width: 100%;
+}
 }
