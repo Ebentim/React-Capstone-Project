@@ -63,12 +63,13 @@ header{
   right: 0;
 }
 .background{
-  height: 300px;
+  min-height: 100vh;
   position: relative;
   background-color: #F4CE14;
   border-end-start-radius: 8px;
   border-end-end-radius: 8px;
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   #desktop-screen{
     margin: 0 20px;

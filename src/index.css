@@ -11,18 +11,19 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
-a {
+  scroll-behavior: smooth;
+}
+ a {
   font-weight: 500;
-  color: #495E57;
+  color: #495e57;
   text-decoration: inherit;
 }
 a:hover {
-  color: #F4CE14;
+  color: #f4ce14;
 }
-a:active{
-  color: #F4CE14;
+a:active {
+  color: #f4ce14;
 }
 body {
   margin: 0;
@@ -42,20 +43,49 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #F4CE14;
+  background-color: #f4ce14;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #495E57;
+    color: #495e57;
     background-color: #ffffff;
   }
   a:hover {
-    color: #495E57;
+    color: #495e57;
   }
   button {
-    background-color: #F4CE14;
+    background-color: #f4ce14;
   }
 }
+
+@media (prefers-color-scheme: dark){
+  :root{
+    color: #ffffff;
+    background-color: #000000;
+  }
+  #about *{
+    color: white !important;
+  }
+  .card-body{
+    background-color: #495e57;
+  }
+  .card-title h6 {
+    color: white;
+  }
+  .cta * {
+    color: white !important;
+  }
+  #highlights .highlight-title h3 {
+    color: white !important;
+  }
+  header{
+    background: white;
+  }
+  .hamburger{
+    color: #495e57;
+  }
+}
+
