@@ -1,89 +1,90 @@
-#home-hero{
-    background-color: #495E57;
-  }
-  #home-hero{
-    height: 385px;
-    padding-top: 20px;
-    width:100%;
-    position: relative;
-  }
-  .hero-text{
-    margin-left: 209px;
-  }
-  .hero-text h1{
-    color: #F4CE14;
-    font-weight: bold;
-    font-size: 64px;
-  }
-   h3{
-    font-size: 40px;
-    font-weight: 700;
-  }
-  .hero-text h3 {
-    color: white;
-    margin: 10px 0;
-  }
-  .hero-text p{
-    font-size: 20px;
-    font-weight: 500;
-    width: 247px;
-    height: 105px;
-    font-family: 'Karla';
-    line-height: 21px;
-    color: #FFFFFF;
-  }
-  .hero-text button{
-    font-size: 20px;
-  }
-  .hero-image{
+#home-hero {
+  background-color: #495e57;
+}
+#home-hero {
+  height: 385px;
+  padding-top: 20px;
+  width: 100%;
+  position: relative;
+}
+.hero-text {
+  margin-left: 100px;
+}
+.hero-text h1 {
+  color: #f4ce14;
+  font-weight: bold;
+  font-size: 64px;
+}
+h3 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.hero-text h3 {
+  color: white;
+  margin: 10px 0;
+}
+.hero-text p {
+  font-size: 20px;
+  font-weight: 500;
+  width: 247px;
+  height: 105px;
+  font-family: "Karla";
+  line-height: 21px;
+  color: #ffffff;
+}
+.hero-text button {
+  font-size: 20px;
+  width: fit-content;
+}
+.hero-image {
   position: absolute;
   width: 375px;
   height: 436px;
-  right: 209px;
+  right: 100px;
   top: 20px;
-  }
-  .hero-image img{
-    height: 100%;
-    width: 100%;
-    border-radius: 8px;
-  }
-
-@media  screen and (max-width: 479px) {
-    #home-hero{
-        height: 347px;
-    }
-    .hero-text{
-        margin-left: 20px;
-        height: 300px;
-        width: fit-content;
-    }
-    .hero-image{
-        height: 150px;
-        width: 130px;
-        top: 35%;
-        left: 60%;
-    }
-    .hero-text p{
-        font-size: 16px;
-        width: 205px;
-        height: 105px;
-        line-height: 17px;
-    }
-    .hero-text button{
-        font-size: 16px;
-    }
-    .hero-text h1{
-        font-size: 54px;
-        width: 100%;
-        line-height: 77px;
-    }
 }
-@media only screen and (min-width: 480px)and (max-width: 767px) {
-  .hero-text{
+.hero-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 479px) {
+  #home-hero {
+    height: 347px;
+  }
+  .hero-text {
+    margin-left: 20px;
+    height: 300px;
+    width: fit-content;
+  }
+  .hero-image {
+    height: 150px;
+    width: 130px;
+    top: 35%;
+    left: 60%;
+  }
+  .hero-text p {
+    font-size: 16px;
+    width: 205px;
+    height: 105px;
+    line-height: 17px;
+  }
+  .hero-text button {
+    font-size: 16px;
+  }
+  .hero-text h1 {
+    font-size: 54px;
+    width: 100%;
+    line-height: 77px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .hero-text {
     margin-left: 20px;
     width: fit-content;
   }
-  .hero-image{
+  .hero-image {
     top: 30%;
     right: 20px;
     height: 250px;
@@ -92,31 +93,30 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .hero-text{
+  .hero-text {
     margin-left: 20px;
     width: fit-content;
   }
-  .hero-image{
+  .hero-image {
     top: 10%;
     right: 20px;
     height: 300px;
     width: 250px;
   }
-  .hero-text p{
+  .hero-text p {
     font-size: 16px;
     width: 205px;
     height: 105px;
     line-height: 17px;
+  }
 }
-}
-
-
+/*
 @media only screen and (min-width: 992px) and (max-width: 1399px) {
-  .hero-text{
+  .hero-text {
     margin-left: 20px;
     width: fit-content;
   }
-  .hero-image{
+  .hero-image {
     top: 10%;
     height: 400px;
     width: 300px;

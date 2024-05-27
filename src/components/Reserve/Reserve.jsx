@@ -152,7 +152,6 @@ const Reserve = () => {
                 <p>Personal Details</p>
                 <div className="personal-details">
                   <label htmlFor="firstname">
-                    {" "}
                     First name <span className="required">*</span>
                   </label>
                   <input
@@ -193,7 +192,9 @@ const Reserve = () => {
                     placeholder="Phone number"
                   />
                   <div className="button-container">
-                    <button onClick={handleContinue}>Continue</button>
+                    <button type="button" onClick={handleContinue}>
+                      Continue
+                    </button>
                   </div>
                 </div>
               </>
@@ -332,10 +333,18 @@ const Reserve = () => {
                     )}
                   </div>
                   <div className="button-container">
-                    <button className="prev-button" onClick={handleBack}>
-                      Personal Details
+                    <button
+                      type="button"
+                      className="prev-button"
+                      onClick={handleBack}
+                    >
+                      Back
                     </button>
-                    <button className="next-button" onClick={handleContinue}>
+                    <button
+                      type="button"
+                      className="next-button"
+                      onClick={handleContinue}
+                    >
                       Continue
                     </button>
                   </div>
@@ -415,10 +424,18 @@ const Reserve = () => {
                     onChange={handleValid}
                   ></textarea>
                   <div className="button-container">
-                    <button className="prev-button" onClick={handleBack}>
-                      Table Details
+                    <button
+                      type="button"
+                      className="prev-button"
+                      onClick={handleBack}
+                    >
+                      Back
                     </button>
-                    <button className="next-button" onClick={handleContinue}>
+                    <button
+                      type="submit"
+                      className="next-button"
+                      onClick={handleContinue}
+                    >
                       Checkout
                     </button>
                   </div>
@@ -430,9 +447,6 @@ const Reserve = () => {
       ) : progress === 3 ? (
         <>
           <Payment />
-          <button className="prev-button" id="main-prev" onClick={handleBack}>
-            Back to Form
-          </button>
         </>
       ) : (
         <Modal

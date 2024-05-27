@@ -1,115 +1,188 @@
-/* 495E57 primary color */
-/* F4CE14 secondary color */
+#edit-order {
+  cursor: pointer;
+  background-color: #f4ce14;
+  margin-top: 10px;
+  height: 40px;
+  border-radius: 8px;
+  color: #495e57;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #payment-form {
-    margin: 30px 209px 0 209px;
-    display: flex;
-    gap: 50px;
-}
-.order-details, .payment-info{
-    width:568px;
-    height: 700px;
-}
-/* Rectangle 59 */
-.order-details{
-    box-shadow: 15px 4px 20px #495E57;
-    border-radius: 8px;
-    border-start-end-radius: 8%;
-    border-end-end-radius: 8%;
-}
-.order-details div {
-    max-height: 250px;
-    height: fit-content;
-    width: 500px;
-    margin: 0 auto 10px auto;
-    font-weight: 400;
-    background-color: rgba(73, 94, 87, 0.25) !important;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-}
-.order-details div:last-child{
-    max-height: 200px;
-    height: auto;
-    min-height: fit-content;
-}
-.order-details div P {
-    margin: 5px auto !important;
-    font-size: 20px;
-    font-weight: 500;
-    width: 90%;
-    padding-bottom: 10px;
-}
-.order-details div p:first-child{
-    margin-top: 10px;
-}
-.order-details div p:last-child{
-    margin-bottom: 10px;
-}
-.order-details .order-subheading{
-    text-align: center;
-    color: #FACE14;
-    margin-top: 10px;
-    margin-bottom: 0;
-    font-size: 20px;
-    font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 
-.payment-info{
-    border-radius: 8px;
-    border-start-start-radius: 8%;
-    border-end-start-radius: 8%;
-    box-shadow: -15px 4px 20px #495E57;
+.comments {
+  background-color: #ee9927;
+  padding: 0 5px;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.payment-details{
-    width: 400px;
-    margin: auto;
-    display: grid;
-    row-gap: 5px;
-    column-gap: 40px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(10, auto);
-    grid-auto-rows: minmax(40px auto);
+.order-details,
+.payment-info {
+  width: calc(3 / 10 * 100%);
 }
-.payment-info input{
-    height: 50px;
-    width: 100% !important;
-    background-color: #EDEFEE;
-    color: #000000;
-    font-size: 24px;
-    border-radius: 8px;
-    border: none;
+.order-details div {
+  min-height: 100px;
+  max-height: 200px;
+  height: auto;
+  margin: auto;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #495e57;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 10px;
 }
-label, input, button{
-    grid-column: 1/-1;
+
+.order-details div P {
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 10px;
 }
-.label-expire{
-    grid-column: 1/2;
+
+.order-details .order-subheading {
+  margin: auto 0;
+  font-size: 20px;
+  font-weight: bold;
 }
-.label-cvv{
-    grid-column: 2/-1;
-    grid-row: 6/7;
+
+.payment-info {
+  border-radius: 8px;
+  background-color: #f4ce14;
+}
+.payment-details {
+  padding: 20px 0;
+  margin: auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(10, auto);
+  grid-auto-rows: minmax(40px auto);
+}
+.payment-info input {
+  height: 50px;
+  width: calc(9 / 12 * 100%);
+  background-color: #edefee;
+  color: #000000;
+  font-size: 24px;
+  border-radius: 8px;
+  border: none;
+  margin: auto;
+}
+
+label,
+input,
+button {
+  grid-column: 1/-1;
+  width: calc(9 / 12 * 100%);
+  margin: auto;
+}
+.label-expire {
+  grid-column: 1/2;
+  width: 50%;
+  margin: auto;
+}
+.label-cvv {
+  grid-column: 2/-1;
+  grid-row: 6/7;
+  width: 50%;
+  margin: auto;
 }
 .label-expire ~ input {
-    grid-column: 1/2
+  grid-column: 1/2;
+  width: 50%;
+  margin: auto;
 }
-.label-cvv ~ input{
+.label-cvv ~ input {
+  grid-column: 2/-1;
+}
+.payable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / span 3;
+}
+#paynow {
+  background-color: #495e57;
+  color: #f4ce14;
+}
+h5 {
+  text-align: center;
+  font-size: 24px;
+  width: 400px;
+  margin: 20px auto 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  #payment-form {
+    width: calc(11 / 12 * 100vw);
+    margin: auto;
+    flex-direction: column;
+  }
+  .order-details,
+  .payment-info {
+    width: 100%;
+  }
+  .payment-info h5 {
+    text-align: center;
+    width: 100%;
+  }
+  .label-expire {
+    grid-column: 1/-1;
+    width: calc(9 / 12 * 100%);
+    margin: auto;
+  }
+  .label-cvv {
+    grid-column: 1/-1;
+    grid-row: 8/9;
+    width: calc(9 / 12 * 100%);
+    margin: auto;
+  }
+  .label-expire ~ input {
+    grid-column: 1/-1;
+    width: calc(9 / 12 * 100%);
+    margin: auto;
+  }
+  .label-cvv ~ input {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #payment-form {
+    width: calc(11 / 12 * 100%);
+    margin: auto;
+  }
+  .order-details,
+  .payment-info {
+    width: calc(11 / 12 * 100%);
+  }
+  .label-expire {
+    grid-column: 1/2;
+    width: 50%;
+    margin: auto;
+  }
+  .label-cvv {
     grid-column: 2/-1;
-}
-.payment-details button {
-    width: 100% !important;
-    margin: 30px auto 0 auto;
-}
-.payable{
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 1/span 3;
-}
-h5{
-    font-size: 24px;
-    width: 400px;
-    margin: 20px auto 0 auto;
+    grid-row: 6/7;
+    width: 50%;
+    margin: auto;
+  }
+  .label-expire ~ input {
+    grid-column: 1/2;
+    width: 50%;
+    margin: auto;
+  }
+  .label-cvv ~ input {
+    grid-column: 2/-1;
+  }
 }

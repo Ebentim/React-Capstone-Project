@@ -21,13 +21,13 @@ const Hero2 = () => {
       <div className="hero-text">
         <h1>Make a Reservation</h1>
         {count === 1 ? (
-          <h3>Effortless Reservation</h3>
+          <h3 className="subheading">Effortless Reservation</h3>
         ) : count === 2 ? (
-          <h3>Choose Your Moment</h3>
+          <h3 className="subheading">Choose Your Moment</h3>
         ) : count === 3 ? (
-          <h3>Anticipation Awaits</h3>
+          <h3 className="subheading">Anticipation Awaits</h3>
         ) : (
-          <h3>Book Now</h3>
+          <h3 className="subheading">Book Now</h3>
         )}
         {count === 1 ? (
           <p>
