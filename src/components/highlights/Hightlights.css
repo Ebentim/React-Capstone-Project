@@ -1,7 +1,7 @@
 #highlights {
   margin: 0 100px;
 }
-.highlight-title button{
+.highlight-title button {
   margin: 0;
   width: 150px;
 }
@@ -67,7 +67,7 @@
   height: 117.07px;
   margin: 5px auto;
 }
-.card-container:nth-child(even) .cta{
+.card-container:nth-child(even) .cta {
   padding: 0;
 }
 .cta {
@@ -88,7 +88,7 @@
 
 @media screen and (max-width: 479px) {
   #highlights {
-    width: calc(11/12*100%);
+    width: calc(11 / 12 * 100%);
     margin: auto;
   }
   .highlight-title {
@@ -116,7 +116,7 @@
 }
 @media only screen and (min-width: 478px) and (max-width: 767px) {
   #highlights {
-    width: calc(11/12*100%);
+    width: calc(11 / 12 * 100%);
     margin: auto;
   }
   .highlight-title {
@@ -147,7 +147,7 @@
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   #highlights {
-    width: calc(11/12*100%);
+    width: calc(11 / 12 * 100%);
     margin: auto;
   }
   .highlight-title {
@@ -196,3 +196,4 @@
     width: 100%;
   }
 }
+*/
